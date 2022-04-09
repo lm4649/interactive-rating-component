@@ -5,45 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <script src="index.js" defer></script>
+
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header></header>
 
-  <!-- Rating state start -->
+  <div class="cards-container">
+    <!-- Rating state start -->
+    <section id="rating">
+      <div class="card">
+        <div class="card-header">
+          <div id="star-icon">
+            <img src="/images/icon-star.svg" alt="icon of star">
+          </div>
+        </div>
 
-  How did we do?
+        <card-body>
+          <h1 class="card-title">
+            How did we do?
+          </h1>
+          <div class="card-text left">
+            Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!
+          </div>
+          <div class="card-rating">
+            <div class="grade">1</div>
+            <div class="grade">2</div>
+            <div class="grade">3</div>
+            <div class="grade">4</div>
+            <div class="grade">5</div>
+          </div>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+          <div class="card-footer">
+            <button id="submit-btn" class="disabled">SUBMIT</button>
+          </div>
+        </card-body>
+      </div>
+    </section>
+    <!-- Rating state end -->
 
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <!-- Thank you state start -->
+    <section id="thanks" hidden>
+      <div class="card centered">
+        <div class="card-header">
+          <div class="icon">
+            <img src="/images/illustration-thank-you.svg" alt="thank you icon" >
+          </div>
+          <div class="notice">
+            You selected <span id="user-grade"></span> out of 5
+          </div>
+            <card-body>
+              <h1 class="card-title">Thank you!</h1>
+              <div class="card-text">
+                We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+              </div>
+            </card-body>
+        </div>
+      </div>
+    </section>
+    <!-- Thank you state end -->
   </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a target="_blank" href="https://github.com/lm4649">Marc LOPES</a>.
+  </div>
+
+  <footer></footer>
 </body>
 </html>
